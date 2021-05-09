@@ -17,7 +17,7 @@ app.use(postRoutes);
 app.use(commentRoutes);
 
 const mongoUri =
-  "mongodb+srv://akash:rootpassword@cluster0.ejfpn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://akash:rootpassword@cluster0.ejfpn.mongodb.net/social?retryWrites=true&w=majority";
 if (!mongoUri) {
   throw new Error(
     `MongoURI was not supplied.  Make sure you watch the video on setting up Mongo DB!`
