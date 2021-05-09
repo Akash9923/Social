@@ -37,9 +37,10 @@ export const createpost = data => dispatch => {
     Api.post(`/posts`, {title: data.title, creadtedBy: data.creadtedBy}).then(
       response => {
         if (response.status == 201) {
-          data.navigation.pop();
+         
           dispatch({type: 'UPDATE_POST', payload: response.data});
           dispatch({type: 'LOADING', payload: false});
+           data.navigation.pop();
         }
       },
     );

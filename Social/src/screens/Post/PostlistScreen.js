@@ -11,6 +11,8 @@ function PostlistScreen({navigation, posts, loading, getpostlist, route}) {
   useEffect(() => {
     getpostlist(route.params.id || '');
   }, []);
+  console.log("commernt",posts)
+
   return (
     <View style={{flex: 1, backgroundColor: colors.background}}>
       <StatusBar backgroundColor={colors.darkblue} />

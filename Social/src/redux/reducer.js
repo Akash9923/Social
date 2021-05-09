@@ -20,11 +20,11 @@ const reducer = (state = initialState, action) => {
     case GET_POST:
       return {...state, posts: action.payload};
     case UPDATE_POST:
-      return {...state, posts: [...state.posts, action.payload]};
+      return {...state, posts: [...state.posts, action.payload.posts]};
     case GET_COMMENT:
       return {...state, comments: action.payload};
     case UPDATE_COMMENT:
-      return {...state, comments: [...state.comments, action.payload]};
+      return {...state, comments: [...state.comments, action.payload.comments]};
     case LOADING:
       return {...state, loading: action.payload};
     default:

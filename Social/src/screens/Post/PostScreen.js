@@ -20,7 +20,6 @@ function PostScreen({
   loading,
 }) {
   const [content, setContent] = useState('');
-
   useEffect(() => {
     getcommentlist(route.params.id);
   }, []);
@@ -62,7 +61,7 @@ function PostScreen({
             />
           </View>
         </View>
-        {!loading && (
+        { (
           <View style={{height: '45%'}}>
             <FlatList
               data={comments}
